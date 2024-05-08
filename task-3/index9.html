@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+        <input id="input">
+        <button onclick="add()" id="btn">Add</button>
+        <div>
+            <ul id="listItem">
+                <li>Hello
+                    <button onclick="deleted(event)" class="btn">Delete</button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    </div>
+    <script>
+        var input = document.getElementById("input");
+        var listItem = document.getElementById("listItem");
+        function add() {
+            var list = document.createElement("li")
+            list.innerHTML = input.value + '<button onclick ="deleted(event)">Delete</button>'
+            listItem.append(list)
+
+        }
+        function deleted(event) {
+            event.target.parentElement.remove()
+        }
+
+    </script>
+</body>
+
+</html>

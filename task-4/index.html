@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>BOOKSKY</h1>
+    </div>
+    <div class="container">
+        <div class="box-container">
+            <h2>Rich dad poor dad</h2>
+            <h5>Carol</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores vero cupiditate
+                asperiores aliquid! Vitae tempore id quisquam quod? Voluptatum dolor iure dolores perspiciatis
+                facilis quod omnis ad ipsa fugit.</p>
+            <button id="closebtn" onclick="deleted(event)">Close</button>
+        </div>
+
+    </div>
+    <button class="btn" id="display-popup">+</button>
+    <div class="overlay"> </div>
+    <div class="popup-box">
+        <h2>Add a Book</h2>
+        <form>
+            <input id="book-tittle" placeholder="book-tittle" type="text">
+            <input id="book-author" placeholder="book-author" type="text">
+            <textarea id="description" placeholder="Create a new Description"></textarea>
+            <button id="add-book">ADD</button>
+            <button id="close-book">CLOSE</button>
+        </form>
+
+    </div>
+    <script src="script.js "></script>
+</body>
+
+</html>

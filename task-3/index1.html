@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Hello world</h1>
+    <button onclick="change()">change</button>
+    <script>
+        var price = 25;
+        var product = "shampoo";
+        var tax = 5;
+        console.log(product);
+         var total= price + tax;
+         console.log(total)
+
+
+         var fruitname = "mango";
+         var count = 10;
+         var price = 50;
+          var total= 10*50;
+          console.log(total) 
+
+          function iphone(){
+            console.log("calling for iphone");
+          }
+          iphone();
+          function samsung(){
+            console.log(" calling for samsung");
+
+          }
+          samsung();
+          function redmi(){
+            console.log("calling for redmi");
+          }
+          redmi()
+          var a = 10;
+          var b = 20;
+function add(){
+    console.log(a+b);
+}
+add()
+ var favator = "kamal";
+ var favplayer = "dhoni";
+  var favmovie = "anbe sivam";
+  function fav(){
+    console.log("favourite actor :"+favator);
+    console.log("favourite player :"+favplayer);
+    console.log("favourite movie :"+favmovie);
+  }
+  fav()
+
+  function area(l,b){
+    console.log(l*b);
+    
+  }
+  area(10,20)
+
+  function area(a,b){
+    return(a+b);
+
+  }
+   var total = area(20,20);
+   console.log(total);
+
+   var homework = true;
+   if(homework){
+    console.log("Great job!")
+   }
+else{
+    console.log("Finish Your Homework after Playing")
+}
+var cookies = false;
+if(cookies){
+    console.log("Would you Like a Cookies!")
+}
+else{
+    console.log("Time to make more cookies")
+}
+
+var brush = true;
+if(brush){
+    console.log("Your teeth are clean!")
+}
+else{
+    console.log("First clean our teeth")
+}
+var birthday  = true;
+if(birthday){
+    console.log("Happy birthday Hava a Greate day!")
+}
+else{
+    console.log("Have a Greate day!")
+}
+var color = "yellow";
+if(color == "red"){
+    console.log("Stop")
+}
+else if(color == "yellow"){
+    console.log("Get ready")
+}
+else if(color == "green"){
+    console.log("Go")
+}
+
+var sesson = "winter";
+if(sesson == "spring"){
+    console.log("Enjoy tha Blooming flowers.")
+}
+if(sesson == "summer"){
+    console.log("Have fun in the summer")
+}
+if(sesson == "autumn"){
+    console.log("Admire the colorful leaves")
+}
+if(sesson == "winter"){
+    console.log("Bundle up and stay warm")
+
+}
+var score = 80;
+if(score<50){
+    console.log("You need to iprove your score")
+}
+ else if(score>=50 && score<=70){
+    console.log("Good job!")
+}
+else if(score>70){
+    console.log("Excellent performence")
+}
+var number = 0;
+if(number %2 == 0){
+    console.log("The number is even")
+}
+else {
+    console.log("The number is add")
+}
+var  character = "y"
+if(character == "a,e,i,o,u"){
+    console.log("it's vowel")
+}
+else if(character != "a,e,i,o,u"){
+    console.log("it is consonent")
+}
+for(count =1;count<=5;count=count+1){
+    console.log("sriram")
+}
+for(count =1;count<=10;count = count+1){
+    console.log(count)
+}
+for(count = 1;count<=10;count=count+2){
+    console.log(count)
+}
+for(count =1;count<=12;count=count+1){
+    console.log(count+"x2"+"="+count*2)
+}
+
+   var heading = document.getElementById("title")
+console.log(heading.textContent)
+function change(){
+    heading.textContent = "Bye world"
+}
+
+    </script>
+</body>
+</html>

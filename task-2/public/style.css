@@ -1,0 +1,40 @@
+.container{
+    background-color: rgb(209, 200, 167);
+    padding: 20px 10px;
+    background-image: url(assets/palm-trees-308383_960_720.webp);
+    width: 100%;
+}
+body{
+    background-color:rgb(245, 229, 148) ;
+}
+.alaign{
+    text-align: center;
+ 
+}
+.btn{
+    font-family: fantasy;
+    word-spacing: 3px;
+border: 1px solid white;
+}
+.input1{
+    border-radius: 5px;
+}
+.input2{
+    border-radius: 5px;
+}
+.add1{
+    border-radius: 4px;
+    font-family: cursive;
+}
+.add2{
+    border-radius: 4px;
+    font-family: cursive;
+}
+.item1{
+    color: white;
+    font-weight: 800;
+}
+.item2{
+    color: white;
+    font-weight: 800;
+}

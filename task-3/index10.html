@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="div" id="form">
+        <form action="">
+            <h1>Student Form</h1>
+            <div class="">
+                <label for="Name">Name</label>
+                <input id="input1" class="form-control" name="Name" placeholder="Enter Your Name" type="text">
+            </div>
+            <div class="div">
+                <label for="Age">Age</label>
+                <input id="input2" class="form-control" name="Age" placeholder="Enter Your Age">
+            </div>
+            <div class="div">
+                <label for="Gender" name="Gender">Gender</label>
+                <input id="male" class="form-checkbox" type="radio" name="Gender" value="male">
+                <label for="male">Male</label>
+                <input id="female" class="form-checkbox" type="radio" name="Gender" value="female">
+                <label for="Female">Female</label>
+            </div>
+            <div class="div">
+                <label for="Course" class="Course">Course</label>
+                <select id="input5">
+                    <option></option>
+                    <option>Javascrit</option>
+                    <option>React</option>
+                    <option>Css</option>
+                    <option>Html</option>
+                </select>
+            </div>
+            <div class="div">
+                <label for="email">Email</label>
+                <input id="input6" class="form-control" placeholder="Enter email" type="email">
+            </div>
+
+            <button onclick="update()" id="save" style="cursor: pointer; ">Save</button>
+        </form>
+    </div>
+
+    <div class="">
+        <table>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>GENDER</th>
+                <th>COURSE</th>
+                <th>EMAIL</th>
+                <th>ACTION</th>
+            </tr>
+            <tbody id="list">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script>
+        var form = document.getElementById("form");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+        })
+
+        function update() {
+            var result = false;
+            var name = document.getElementById("input1").value;
+            if (name == "") {
+                result = false;
+
+            }
+            else {
+
+                console.log(name)
+            }
+
+
+            var age = document.getElementById("input2").value;
+            if (age == "") {
+                result = false;
+            }
+            else {
+
+                console.log(age)
+            }
+
+
+            var male = document.getElementById("male");
+            var female = document.getElementById("female");
+
+            var genderChecked = false;
+            var genderValue = ""
+
+            if (male.checked) {
+
+                genderChecked = true;
+                genderValue = "male"
+                console.log(genderValue)
+            }
+            else if (female.checked) {
+                genderChecked = true;
+                genderValue = "female"
+                console.log(genderValue)
+            }
+            if (genderChecked) {
+                result = false;
+            }
+
+
+
+            var course = document.getElementById("input5").value;
+            if (course == "") {
+                result = false;
+            }
+            else {
+
+                console.log(course)
+            }
+            var email = document.getElementById("input6").value
+            var evalue = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email  && email.match(evalue)) {
+
+                console.log(email);
+            }
+            else {
+                result = false;
+            }
+            if (result) {
+                return;
+            }
+
+
+            var obj = {
+                name: name,
+                age: age,
+                genderValue: genderValue,
+                course: course,
+                email: email,
+            }
+            inform = [];
+            inform.push(obj);
+
+            var detail = JSON.stringify(inform);
+            localStorage.setItem("information", detail)
+
+            function add() {
+                detail1 = localStorage.getItem("information")
+                JSON.parse(detail1)
+                var table = document.getElementById("list") 
+
+                var row = document.createElement("tr")
+                row.innerHTML = `<td>${name}</td><td>${age}</td><td>${genderValue}</td><td>${course}</td><td>${email}</td><td><button onclick="deleted(this)" style="background-color:red">Delete</button></td>`
+                table.appendChild(row)
+            }
+
+            add()
+        }
+        function deleted(btn) {
+            var row = btn.parentNode.parentNode;
+            alert("Do You Want Delete!")
+            row.parentNode.removeChild(row);
+        }
+    </script>
+
+</body>
+
+</html
